@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+body{
+    color: white;
+    background-color: rgb(29, 27, 51);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container:hover .overlay {
+	opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.head{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-right: 12px;
+    padding-left: 29px;
+    margin-bottom: 7px;
+}
+
+.head form{
+    margin-top: 12px;
+}
+
+.head input[type="text"]{
+    width: 400px;    
+}
+
+.head input{
+    padding: 5px;
+    border-radius: 5px;
+    margin: auto 4px;
+    font-size: 15px;
+}
+
+.movies{
+    /* position: relative; */
+    margin: 0 20px;
+    overflow-x: scroll;
+}
+
+.fovorites{
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.results{
+    display: flex;
+    width: fit-content;
+}
+
+.previous, .next{
+    width: 34px;
+    position: absolute;
+    top: 239px;
+    z-index: 2;
+    padding: 3px;
+}
+
+.previous:hover, .next:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+
+.previous{
+    transform: rotate(180deg);
+    left: 7px;    
+}
+
+.next{
+    right: 17px;
+}
+
+.movie{
+    width: min-content;
+    margin: 10px;
+    text-align: center;
+}
+
+.movie img{
+    height: 300px;
+}
+
+.movie p{
+    width: 100%;
+    margin: 4px auto;
+}
+
+.fav-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 8px;
+}
+
+.fav-head button{
+    padding: 4px 12px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #8c2525e3;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.fav-head button:hover{
+    transform: scale(1.1);
+}
+
+.copy-btn{
+    margin-left:12px;
+    color:'#f7eded';
+}
+
+.copy-btn:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
